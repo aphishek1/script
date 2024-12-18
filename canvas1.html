@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    #mycan
+    {
+
+    }
+</style>
+<body>
+
+    <canvas id="mycan" width="1600" height="800"></canvas>
+    <!--we have to use  drawing api drawing function-->
+
+    <script>
+      var can= document.getElementById("mycan")
+
+      var c = can.getContext("2d");
+      var drawcolor ="red"
+      var brushsize ="1"
+      var r,g,b
+      
+      function stardraw(e)
+      {
+        document.title ="X ="+e.pagX+" y ="+e.pageY
+        c.beginPath()
+        c.arc(e.pageX,e.pageY,brushsize,0,2*Math.PI)
+        c.fillstyle=drawcolor
+        c.fill()
+      }
+
+      function f1(e)
+      {
+        document.title=e.keyCode
+        //s
+        if(e.keyCode == 83)
+      {
+        brushsize++
+        document.title=brushsize
+      }
+
+      //68=D
+
+      {
+
+      }
+
+      //spacebar
+      if(e.keyCode==32)
+      {
+        c.clearRect(0,0,1500,900)
+      }
+
+      //67=c
+      if(e.keyCode ==67)
+      {
+        r= Math.round(Math.random()*255)
+        g= Math.round(Math.random()*255)
+        b= Math.round(Math.random()*255)
+
+        drawcolor=`rgb(${r},${g},${b})`
+      }
+
+
+      }
+
+      document.addEventListener("mousemove",startdraw)
+      document.addEventListener("keydown",f1)
+
+
+    </script>
+    
+</body>
+</html>

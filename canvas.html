@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    #mycan
+    {
+
+    }
+</style>
+<body>
+
+    <canvas id="mycan" width="1600" height="800"></canvas>
+    <!--we have to use  drawing api drawing function-->
+
+    <script>
+      var can= document.getElementById("mycan")
+
+      var c = can.getContext("2d")
+      c.beginPath()
+      c.arc(200,230,120,0,2*Math.PI)
+      //alert(2*Math.PI)
+      c.fillstyle="red"
+      c.font="50px Arial"
+      c.fillText("hello",100,80);
+
+      c.strokeStyle ="Green";
+      c.lineWidth ="20"
+      c.fill()
+      c.stroke();
+
+      //c.react(400,100,200,200)
+      //c.stroke();
+      //c.fillstyle="red"
+      c.fillRect(400,100,200,200)
+
+    </script>
+    
+</body>
+</html>
