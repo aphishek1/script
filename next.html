@@ -1,0 +1,119 @@
+<body>
+    
+    <div id="bar"><button id="dark">Dark</button><button id="light">Light</button>
+
+</body>
+
+
+
+<style>
+
+    #bar{
+      width:100%;
+      text-align:center;
+      padding:20px;
+    }
+    
+    #dark,#light
+    {
+      background:black;
+      cursor:pointer;
+      text-align: center;
+      color: gold;
+      border-radius: 20px;
+      box-shadow: 2px 5px 5px black;
+    }
+    
+     @keyframes move
+     {
+     from{margin-left:-30px;}
+     to{margin-right:18%;}
+      }
+ 
+
+     
+     #myheading2
+     {
+    color:white;
+    background:;
+    display:block;
+    width:100%;
+    font-size:120px;
+    text-shadow:5px 5px 5px teal;
+    animation:move 2s ease-in infinite alternate;
+    }
+
+    </style>
+    
+    <body>
+    
+      
+      <script>
+    
+       var d =document.getElementById("dark")
+       var l =document.getElementById("light")
+       var m =document.createElement("span")
+       var b =document.getElementById("bl")
+       document.body.appendChild(m)
+    
+       
+        
+      m.style="transition:0.5s;opacity:0;position:absolute;top:0px;left:0px"
+      
+    
+      d.onclick = function()
+      {
+        document.body.style="background:black;color:white;"
+    
+      }
+       
+      l.onclick =function()
+      {
+        document.body.style="background:#DEFAFF;color:;"
+      }
+    
+      d.onmouseover =function(e)
+      {
+        m.style.opacity=1
+        m.style.top =e.pageY+4+"px"
+        m.style.left =e.pageX-20+"px"
+        
+        document.title ="x ="+e.pageX+" y = "+e.pageY
+        d.style.transform="rotate(360deg)"
+    
+      }
+    
+      d.onmouseout =function()
+      {
+        m.style.opacity=0
+      }
+      
+      
+    
+      l.onmouseover = function(e)
+      {
+        m.style.opacity=1
+        m.style.top =e.pageY+5+"px"
+        m.style.left =e.pageX-65+"px"
+        
+        document.title ="x ="+e.pageX+" y ="+e.pageY
+      }
+    
+      l.mouseout =function(e)
+      {
+        m.style.opacity=0
+        
+      }
+    
+      document.title ="ready"
+    
+     
+      </script>
+
+       <h1 id="myheading2">Javascript</h1>
+
+    
+    </body>  
+
+
+</html>

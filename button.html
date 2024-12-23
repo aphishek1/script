@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+
+.hov
+{
+transform:scale(1);
+border-radius:15px;
+transition:0.90s ease-in-out;
+}
+
+.hov1
+{
+border-radius:15px;
+transition:0.90s ease-in-out;
+}
+
+.mystyle{
+
+color:grayscale;
+box-shadow:10px 10px 10px teal;
+transform:scale(1);
+}
+
+</style>
+
+<body>
+
+<h1 id="about">Hello</h1>
+<img src="images/29.png " width='50%'>
+
+<p>
+   
+</p>
+
+<script>
+
+ var myhead = document.getElementById("about")
+myhead.style="text-align:center;margin:auto;width:200px;border-radius:35px;"
+myhead.style.background="red"
+myhead.style.padding="20px"
+myhead.innerHTML = "<h1><u><i>Hello</i></u></h1><img src='images/30.png'margin:auto; width='100%' />"
+
+
+myhead.onclick =function()
+{
+myhead.style.background="green"
+myhead.style.cursor ="pointer"
+myhead.className="mystyle"
+myhead.className="hov"
+}
+
+myhead.onmouseout=function()
+{
+    myhead.style.background="cyan"
+    myhead.classList.remove("mystyle")
+}
+
+
+
+
+var d = document.createElement("div")
+         document.body.appendChild(d)
+    
+         d.style="padding:30px;text-align:center;color:green"
+         d.style.width="100px"
+         d.style.height="100px"
+         d.style.border="10px"
+         d.style.background="cyan"
+         d.style.boxShadow= "10px 10px 10px gray"
+    
+     
+    
+        d.innerHTML = "<h1><u><i>Book Now</i></u></h1><img src='images/30.png' width='100%' />"
+         
+        d.onclick =function()
+       {
+        d.style.background="teal"
+        d.style.cursor ="pointer"
+        d.style.scale="20px"
+       }
+
+       //d.onmouseout=function()
+      {
+      d.style.background="cyan"
+      d.className.remove("d")
+      }
+
+    
+        
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+#tool{
+  width:700px;
+}
+
+#mycolor.mycolor1{
+  width:10%;
+  height:20px;
+  border-radius:100px;
+}
+
+p{
+  font-size:15px;
+  font-family:verdana;
+  padding:20px;
+}
+
+#tool{
+  margin:100px;
+  top:-40px;
+ position:fixed;
+
+}
+
+
+</style>
+
+
+<body>
+
+
+ <h1>Well Well Look who Come Now</h1>
+ <div id="tool">
+
+ <input id="slider1" type="range" max="50" min="15" value="15">
+ <input type="color" id="mycolor">
+ <input type="color" id="mycolor1">
+
+ </div>
+
+ <p id="text">
+  Nobody Loooking Write Down Anything Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque natus cum libero tempora, optio alias voluptas? Nulla esse ipsam, excepturi id veniam vero ducimus error molestias, aperiam inventore debitis mollitia!
+ </p>
+
+ <script>
+
+ var s1 = document.getElementById("slider1")
+ var c = document.getElementById("mycolor")
+ var s = document.getElementById("mycolor1")
+
+ var t = document.getElementById("text")
+
+
+
+ s1.onchange = function()
+ {
+  t.style.fontsize= s1.value+"px"
+
+ }
+
+
+ c.onchange=function()
+ {
+  t.style.color=c.value
+ }
+
+ s.onchange=function()
+ {
+  document.body.style.background=s.value
+ }
+
+ document.title="no"
+
+
+ </script>
+
+
+
+</body>
+</html>
