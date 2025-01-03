@@ -155,6 +155,19 @@ if(e.keyCode == 71)
 
 
     }
+        size.onclick= function()
+            {
+                 brushsize++           
+         document.title=brushsize
+            }
+
+         small.onclick= function()
+            {
+                 brushsize--
+          document.title =brushsize
+                
+            }
+        
 
       document.addEventListener("mousemove",startdraw)
       document.addEventListener("keydown",f1)
