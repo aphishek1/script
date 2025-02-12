@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+
+
+    <link rel="stylesheet"a href="style.css"></a>
+
+
+
+</head>
+
+
+
+ 
+ <body>
+    <div id="mybox">Up to date</div>
+    <div id="but">
+    <button onClick="stopclock()">Try To Stop</button>
+    <button onClick="starclock()">Start</button>
+   </div>
+    
+    
+    <script>
+ 
+ 
+     var clock = document.getElementById("mybox")
+     document.bgcolor = "Green"
+     clock.style ="box-shadow: 2px 2px 0px gray;text-align:center;background:black;"
+     clock.style.width ="100px"
+     clock.style.height ="25px"
+     clock.style.borderEndStartRadius="10px"
+     clock.style.borderRadius="8px"
+     var d
+ 
+     function show()
+     {
+      d = new Date()
+      clock.innerHTML=d.toLocaleTimeString()
+     }
+ 
+     var t = setInterval("show()",1000)
+     function stopclock()
+     {
+       clearInterval(t)
+     }
+ 
+     function starclock()
+     {
+      t = setInterval("show()",1000)
+     }
+ 
+  </script>
+ 
+ 
+</body>
+ 
+
+<body>
+   
+  <div id="bar"><button id="dark">Dark🧐</button><button id="light">light🙂</button>
+ 
+
+ <script language="javascript" type="text/javascript">
+
+   /* Creating Element(tag) Dynamically */
+   var e=document.createElement("div")
+   document.body.appendchild(e)
+   e.classList.add("mystyle")
+   e.style="padding:30px;text-align:center;color:blue"
+   e.style.width="300px"
+   e.style.height="300px"
+   e.style.background="cyan"
+   e.style.boxShadow= "10px 10px 10px gray"
+   e.innerHtml ="<h1><u><i>Hello</i></u></h1><img src='images/1.png' width='50%' />"
+
+
+ alert("Welcome")
+
+ </script>
+
+
+
+
+
+
+
+
+  <h2>Hello Nation</h2>
+    
+  <h1><font color="#6DAD68">Abhishek</font> Kumar</h1></p>
+  </div>
+  <p>
+   <div style="font-family:verdana;text-indent:40px;font-size:28px;">
+ <p>
+ I'm a UX/UI Designer with a background in
+ Psychology, which gives me a unique edge in
+ empathizing with users and improving
+ their experience through design. My research
+ experience has refined my problem-solving
+  skills and user insights.I'm constantly
+ seeking new ways to learn and grow through
+ real-world experiences.</p>
+
+ <p>
+ "As a recent graduate with a degree in graphic
+ design, I'm excited to launch my career in UX
+ & UI design. Skilled in Adobe
+ Creative Suite, HTML, and Javascript, I'm
+ passionate about creating intuitive and
+ user-friendly interfaces for web and mobile
+ applications.
+  </p>
+ </div>
+
+ <h1 style="text-align:center;font-family:verdana,Arial black;font-size:50px;margin:auto;width:90%;border-radius:25px;box-shadow:10px 10px 10px gray">Practice Pages</h1>
+
+
+ <div id="navbar">
+
+ <ol>
+ <li><a href="script.html">Script</a></li>
+ <br>
+ <li><a href="button.html">Button</a></li>
+ <br>
+ <li><a href="show.html">Advertisment</a></li>
+ <br>
+ <li><a href="new.html">Command/color</a></li>
+ <br>
+ <li><a href="variable.html">Variable</a></li>
+ <br>
+ <li><a href="next.html">Togle/Script</a></li>
+ <br>
+ <li><a href="toggle.html">Togle/Animation</a></li>
+ <br>
+ <li><a href="slider.html">Slider</a></li>
+ <br>
+ <li><a href="colorbar.html">Input Color</a></li>
+ <br>
+ <li><a href="array.html">Array/list</a></li>
+ <br>
+ <li><a href="time.html">Date</a></li>
+ <br>
+ <li><a href="loopbutton.html">Loop/Button</a></li>
+ <br>
+ <li><a href="loop.html">Loop</a></li>
+ <br>
+ <li><a href="looparray.html">Loop/Array</a></li>
+ <br>
+ <li><a href="looptable.html">Loop/Table%</a></li>
+ <br>
+ <li><a href="looptble.html">Loop/Table</a></li>
+ <br>
+ <li><a href="daypic.html">Day Update/Pic</a></li>
+ <br>
+ <li><a href="ban.html">Banner/1</a></li>
+ <br>
+ <li><a href="banlef.html">Banner/Moving Animation</a></li>
+ <br>
+ <li><a href="banopc.html">Banner/Fade Animation</a></li>
+ <br>
+ <li><a href="banscale.html">Banner/scale Animation</a></li>
+ <br>
+ <li><a href="keyanim.html">Superman/Key Animation</a></li>
+ <br>
+ <li><a href="windows.html">Start Game/Windows</a></li>
+ <br>
+ <li><a href="canvas.html">Canvas/Basic</a></li>
+ <br>
+ <li><a href="canvas1.html">Canvas/Drawing</a></li>
+
+ 
+ </ol>
+
+</div>
+
+
+
+
+</body>
+
+  
+  <body>
+  
+    
+    <script>
+  
+     var d =document.getElementById("dark")
+     var l =document.getElementById("light")
+     var m =document.createElement("span")
+     var b =document.getElementById("bl")
+     document.body.appendChild(m)
+  
+      function f1()
+      {
+        if(document.body.style.background="black")
+  
+        {
+          
+          
+          document.body.style="background=black;color:;"
+          
+        }
+        else
+        {
+  
+          
+           document.body.style="background:black;color:white;"
+        }
+    }
+      
+    m.style="transition:0.5s;opacity:0;position:absolute;top:0px;left:0px"
+    
+  
+    d.onclick = function()
+    {
+      document.body.style="background:black;color:white;"
+  
+    }
+     
+    l.onclick =function()
+    {
+      document.body.style="background:;color:;"
+    }
+  
+    d.onmouseover =function(e)
+    {
+      m.style.opacity=1
+      m.style.top =e.pageY+4+"px"
+      m.style.left =e.pageX-20+"px"
+      
+      document.title ="x ="+e.pageX+" y = "+e.pageY
+      d.style.transform="rotate(360deg)"
+  
+    }
+  
+    d.onmouseout =function()
+    {
+      m.style.opacity=0
+    }
+    
+    
+  
+    l.onmouseover = function(e)
+    {
+      m.style.opacity=1
+      m.style.top =e.pageY+5+"px"
+      m.style.left =e.pageX-65+"px"
+      
+      document.title ="x ="+e.pageX+" y ="+e.pageY
+    }
+  
+    l.mouseout =function(e)
+    {
+      m.style.opacity=0
+      
+    }
+  
+    document.title ="ready"
+  
+   
+    </script>
+  
+  </body>  
+
+
+
+</html>

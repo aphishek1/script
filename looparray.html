@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+
+<h1 style="text-shadow:5px 6px 6px pink;
+font-family:Arial black;font-size:50px;color:dodgerblue;
+text-align:center">Loop/Array</h1>
+
+
+<style>
+
+.pic{
+  box-shadow: 5px 5px 5px gold;
+  color:white;
+  margin:40px;
+ cursor: pointer;
+ width: 100px;
+ height:100px;
+ padding:5px;
+ background: gray;
+ transition: 0.50s;
+
+}
+
+.pic:hover{
+transform: scale(1.30)rotate(-8deg);
+}
+
+
+</style>
+<body>
+   
+  <script>
+  // for loop
+  //syntax
+
+  var plist=["1.gif","2.gif","3.gif","4.gif","5.gif","6.gif","7.gif","8.gif"]
+
+  for(var i =0;i<plist.length;i++)
+  {
+    document.write("<img src ='images/"+plist[i]+" ' class='pic'>")
+   
+   
+  }
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+ 
+ header{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  height: 300px;
+  box-shadow: 5px 5px 5px goldenrod;
+
+ }
+
+ .picstyle{
+
+  position: absolute;
+  top: 80px;
+  left: 200px;
+  width: 60%;
+  margin: auto;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 5px gray;
+  transition:4s ease-in-out;
+
+
+
+ }
+
+</style>
+
+<h1 style="text-align: center;">Advertisment Banner</h1>
+
+
+<body onLoad="show()">
+
+
+  
+
+ 
+
+  <img class="picstyle" id="t1" src="images/1.gif" />
+  
+  <img class="picstyle" id="t2" src="images/2.gif" />
+
+  <img class="picstyle" id="t3" src="images/3.gif" />
+
+  <img class="picstyle" id="t4" src="images/4.gif" />
+
+  <img class="picstyle" id="t5" src="images/5.gif" />
+
+  <script>
+   
+
+   var c= -2
+   var t
+   //recusrive funtion
+
+    var t1 = document.getElementById("t1")
+    var t2 = document.getElementById("t2")
+    var t3 = document.getElementById("t3")
+    var t4 = document.getElementById("t4")
+    var t5 = document.getElementById("t5")
+
+
+   function show()
+   {
+        if(c<5)
+          {
+           c++
+          }
+
+          else
+          {
+          c=1
+          }
+
+      switch(c)
+      {
+        case 1:
+        t5.style.left ="-700px"
+        t5.style.opcacity = 0
+
+         break;
+          case 2:
+          t2.style.left ="700px"
+          t2.style.opcacity = 0
+
+
+          break;
+          case 3:
+          t3.style.left ="-700px"
+          t3.style.opcacity = 0
+
+
+          break;
+          case 4:
+          t4.style.left ="700px"
+          t4.style.opcacity = 0
+
+
+          break;
+          case 5:
+          t1.style.left ="150px"
+          t5.style.opcacity = 1
+
+            case 2:
+            t2.style.left ="-150px"
+            t2.style.opcacity = 1
+
+            case 2:
+            t3.style.left ="150px"
+            t3.style.opcacity = 1
+
+            case 2:
+            t4.style.left ="-150px"
+            t4.style.opcacity = 1
+
+            case 2:
+            t5.style.left ="150px"
+            t5.style.opcacity = 1
+
+            break;
+
+
+      }
+        
+      
+      
+      
+    document.title = c
+    t=setTimeout("show()",3000)
+          
+       
+          
+  }
+
+
+
+ </script>
+
+
+
+
+  
+</body>
+</html>

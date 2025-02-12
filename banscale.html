@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+ 
+header{
+  width:70%;
+  margin:auto;
+  text-align:center;
+  height:300px;
+}
+
+.body{
+  overflow-x: hidden;
+}
+
+.picstyle{
+
+height:250px;
+position:absolute;
+left: 200px;
+top:10px;
+width:60%;
+margin:auto;
+border-radius: 20px;
+box-shadow:5px 5px 5px gray;
+transition:2s ease-in-out;
+
+}
+
+</style>
+
+<body onLoad="show()">
+
+ <img class="picstyle" id="p1" src="images/p1.gif" />
+ <img class="picstyle" id="p2" src="images/p2.gif" />
+ <img class="picstyle" id="p3" src="images/p3.gif" />
+ <img class="picstyle" id="p4" src="images/p4.gif" />
+ <img class="picstyle" id="p5" src="images/p5.gif" />
+ 
+ 
+
+<script>
+  var c= -2
+  var t
+   //recusrive funtion
+
+    var p1 = document.getElementById("p1")
+    var p2 = document.getElementById("p2")
+    var p3 = document.getElementById("p3")
+    var p4 = document.getElementById("p4")
+    var p5 = document.getElementById("p5")
+    
+    
+   
+  function show()
+  {
+        if(c<5)
+          {
+           c++
+          }
+
+          else
+          {
+          c=1
+          }
+
+    switch(c)
+      {
+          case 1:
+          p5.style.transform="scale(3)"
+          p5.style.opacity = 0
+          break;
+          case 2:
+          p4.style.transform="scale(3)"
+          p4.style.opacity = 0
+          break;
+          case 3:
+          p3.style.transform="scale(3)"
+          p3.style.opacity = 0
+          break;
+          case 4:
+          p2.style.transform="scale(3)"
+          p2.style.opacity = 0
+          break;
+          case 5:
+          p1.style.opacity = 1;p1.style.transform="scale(1)"
+          p2.style.opacity = 1;p2.style.transform="scale(1)"
+          p3.style.opacity = 1;p3.style.transform="scale(1)"
+          p4.style.opacity = 1;p4.style.transform="scale(1)"
+           break;
+
+
+      }
+        
+      
+      
+      
+    document.title = c
+    t=setTimeout("show()",2000)
+   }
+          
+       
+          
+
+
+   //timer object
+   // var t=setinterval("show()",1000)
+ </script>
+
+
+ 
+
+
+  
+</body>
+</html>

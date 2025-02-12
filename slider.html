@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+
+#slider{
+  display:block;
+  margin:auto;
+  transition: all ease-in-out;
+  margin-right: 0%;
+}
+
+#pic{
+  width:400px;
+  height:400px;
+  box-shadow:10px 10px 10px gray;
+  display:block;
+  margin:auto;
+}
+
+</style>
+
+
+
+
+<body>
+
+
+  <input id="slider" type="range" max="6" min="1" id="slider">
+
+   <br>
+   <br>
+   <br>
+   
+   
+
+  <img id="pic" src="images/8.gif" style="transition: 0.5s;width:50px;height:50px;margin:auto;border-color:aqua">
+
+  
+
+ 
+ 
+
+ <script>
+  
+  var s =document.getElementById("slider")
+  var p =document.getElementById("pic")
+  s.onchange = function()
+
+  {
+    document.title = this.value
+    p.style.transform=`scale(${s.value})` 
+  
+  }
+
+ </script>
+
+
+ <h1 style="text-align:center;font-family:verdana,Arial black;font-size:30px;color:#6DAD68;top:50%;box-shadow:10px 10px 10px gray">Slider</h1>
+
+
+</body>
+</html>

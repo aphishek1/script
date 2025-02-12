@@ -1,0 +1,114 @@
+#mybox{
+ 
+    margin: auto;
+    text-align: center;
+    color: azure;
+   }
+  
+  
+   #but{
+    margin: auto;
+    color: burlywood;
+    text-align: center;
+   }
+
+
+   p{
+    transition:2s;
+    animation:come 2s ease-in-out;
+    }
+    
+    
+    @keyframes come
+    {
+    from{margin-right:990px;}
+    to{margin-right:0px;}
+    }
+    
+    
+    @keyframes comfromright
+    {
+    from{margin-right:0px;}
+    to{margin-right:990px;}
+    }
+    
+    @keyframes fadout
+    {
+    from{opacity:0;transform:scale(1.5);}
+    to{opacity:0.99;}
+    }
+    
+    @keyframes blink
+    {from{opacity:0}
+    to{opacity:1}
+    }
+    
+    
+    @keyframes move
+    {
+    from{margin-left:30%;}
+    to{margin-left:-30px;}
+    }
+    
+    
+    #navbar
+    {
+    background:tal;
+    cursor:pointer;
+    }
+    
+    #navbar ol
+    {
+    color: white;
+    margin:auto;
+    width:40%;
+    margin-top:50px;
+    text-align:centre;
+    }
+    
+    #navbar ol li
+    {
+    list-style:none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding:20px;
+    background:black;
+    margin-left:0px;
+    transition:1s;
+    color: white;
+    text-align: center;
+    box-shadow: 10px 5px 10px gray;
+    border-radius: 25px;
+    animation:fadout 1s ease-in;
+    }
+    
+    
+    #navbar ol li:hover
+    {
+    transform:scale(1.50) rotate(-4deg) ;
+    border-radius:30px;
+    background:black;
+    animation:blink 0.5s ease-in-out;
+    }
+    
+    
+    a:link{color:white;text-decoration:none}
+    a:visited{color:white;}
+    a:hover{text-decoration:underline gray;color:white}
+    a:active{background:orange;}
+
+    
+    #bar{
+        text-align:right;
+        padding-right:50px;
+      }
+      
+      #dark,#light
+      {
+        background:black;
+        cursor:pointer;
+        text-align: center;
+        color: gold;
+        border-radius: 20px;
+        box-shadow: 2px 5px 5px black;
+      }
+      

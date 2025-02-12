@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+
+    @keyframes move
+     {
+     from{margin-left:-30px;}
+     to{margin-right:60px;}
+      }
+
+
+  body{
+    text-align:center;
+    font-size: 30px;
+    background:#DEFAFF;
+  
+  }
+
+  .pic{
+    width:100%;
+    margin: auto;
+    border-radius: 25px;
+    height: 300px;
+    cursor: pointer;
+  }
+
+  .pic:hover{
+ transform: scale(1.10);
+ }
+
+
+  #mes{
+    font-size:50px;
+    font-family: Helvetica, sans-serif;
+    position: relative;
+    top: -100px;
+    color:whitesmoke;
+    text-decoration: wavy ;
+    animation:move 2s ease-in infinite alternate;
+
+  }
+
+</style>
+<body>
+     
+     
+     <h1>Day</h1>
+
+     <img id="pic" src="images/1.gif" class="pic">
+     <div id="mes">Images</div>
+
+
+     <script>
+          /* working with switch case */
+              var p = document.getElementById("pic")
+              var m = document.getElementById("mes")
+
+
+
+              var d = new Date()
+              var today =d.getDay()
+
+              //alert(today)
+
+
+              switch(today)
+              {
+                case 1:
+                  m.innerHTML ="Monday"
+                  p.src="images/1.gif"
+                  break;
+
+                  case 2:
+                  m.innerHTML ="Tuesday"
+                  p.src="images/9.gif"
+                  break;
+
+
+                  case 3:
+                  m.innerHTML ="Wednesday"
+                  p.src="images/8.gif"
+                  break;
+
+                  case 4:
+                  m.innerHTML ="Thursday"
+                  p.src="images/3.gif"
+                  break;
+
+
+                  case 5:
+                  m.innerHTML ="Friday"
+                  p.src="images/4.gif"
+                  break;
+
+
+                  case 6:
+                  m.innerHTML ="Saturday"
+                  p.src="images/5.gif"
+                  break;
+
+
+                  case 7:
+                  m.innerHTML ="Sunday"
+                  p.src="images/6.gif"
+                  break;
+
+
+              }
+
+
+
+     </script>
+    
+    
+
+</body>
+</html>

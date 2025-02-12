@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+ 
+ header{
+  width:70%;
+  margin:auto;
+  text-align:center;
+  height:300px;
+ }
+
+ .pic{
+
+  width:60%;
+  height:250px;
+  position: absolute;
+  top:10px;
+  left:200px;
+  margin:auto;
+  border-radius:10px;
+  box-shadow:5px 5px 5px gray;
+  transition:4s ease-in-out;
+
+ }
+
+</style>
+
+
+
+<body onLoad="show()">
+
+ <img class="pic" id="p1" src="images/1.gif" />
+ <img class="pic" id="p2" src="images/2.gif" />
+ <img class="pic" id="p3" src="images/3.gif" />
+ <img class="pic" id="p4" src="images/4.gif" />
+ <img class="pic" id="p5" src="images/5.gif" />
+ 
+ 
+
+  <script>
+   var c= -2
+   var t
+   //recusrive funtion
+
+    var p1 = document.getElementById("p1")
+    var p2 = document.getElementById("p2")
+    var p3 = document.getElementById("p3")
+    var p4 = document.getElementById("p4")
+    var p5 = document.getElementById("p5")
+    
+    
+   //function show():void
+   function show()
+   {
+        if(c<5)
+          {
+           c++
+          }
+
+          else
+          {
+          c=1
+          }
+
+      switch(c)
+      {
+          case 1:
+          p5.style.opacity =0
+          break;
+          case 2:
+          p4.style.opacity =0
+          break;
+          case 3:
+          p3.style.opacity =0
+          break;
+          case 4:
+          p2.style.opacity =0
+          break;
+          case 5:
+          p1.style.opacity =1
+          p2.style.opacity =1
+          p3.style.opacity =1
+          p4.style.opacity =1
+           break;
+
+
+      }
+        
+      
+      
+      
+    document.title = c
+    t=setTimeout("show()",3000)
+   }
+          
+       
+          
+
+
+   //timer object
+   // var t=setinterval("show()",1000)
+ </script>
+
+  
+  
+</body>
+</html>

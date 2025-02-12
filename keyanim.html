@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+
+
+
+
+
+#ow1{
+width:100%;
+height:100vh;
+scale:1.60;
+opacity:0.90;
+background-image:url(images/p5.gif);
+background-position:bottom;
+background-size:cover;
+display:flex;
+align-items:flex-end;
+justify-content:center;
+margin:auto;
+position:fixed;
+z-index:-1;
+top:0%;
+font-size: 20px;
+color:black;
+
+}
+
+#ow1 img
+{
+width:100vw;
+height:100vhpx;;
+}
+
+ .pic{
+  width: 20%;
+  position: absolute;
+  top:0px;
+  left:0px;
+ }
+
+</style>
+    
+  <img id="sup" src = "images/supe.gif" class="pic" >
+
+    
+<body>
+
+
+   
+   <script>
+    
+    var sup = document.getElementById("sup")
+
+    var k=t=L=0
+    var s= 5
+
+    function myaction(e)
+    {
+      //alert (e.keycode)
+    /*
+      left :37
+      right:39
+      up:38
+      down:40
+      space:32
+      s:83
+      w:87
+    */
+
+    
+
+     k = e.keyCode
+
+
+       switch(k)
+    {
+        case 39:
+          L=L+s
+          if(L>=0)
+
+      {
+        sup.style.left = L+"px"
+        sup.style.transform="rotate(0deg)"
+        document.title = L
+
+      }
+
+       break;
+
+       case 37:
+       sup.style.transform="rotate(180deg)"
+       sup.style.transform="rotateY(180deg)"
+       L=L-6
+       if(L>0)
+       {
+        sup.style.left = L+"px"
+          document.title = L
+       }
+
+       break;
+
+
+       case 40:
+        L=L+s
+        if(L<window.innerHeight)
+       {
+        sup.style.top = L+"px"
+          document.title = L
+       }
+
+       break;
+
+
+       case 38:
+        if(L>0)
+       {
+        L=L-s
+        sup.style.top = L+"px"
+          document.title = L
+
+       }
+       break;
+
+
+       case 83:
+        if(L+s)
+        {
+        sup.style.top = L+"px"
+       sup.style.transform="rotate(90deg)"
+        document.title = L
+
+      }
+      if(L<window.innerHeight)
+       {
+        sup.style.top = L+"px"
+          document.title = L
+       }
+
+       break;
+
+
+      case 87:
+      if(L>0)
+  
+        {
+          L=L-s
+        sup.style.top = L+"px"
+          document.title = L
+        sup.style.down = L+"px"
+       sup.style.transform="rotate(320deg)"
+        
+
+      }
+
+      
+      break;
+   
+
+
+       //for speed
+
+       case 32:
+        s=s+1
+        document.title = s
+        break;
+
+
+    }
+  
+   }
+
+
+  document.addEventListener("keydown",myaction)
+
+
+
+  </script>
+
+ <div id="ow1">
+
+  <h1>Superman Animation</h1>
+
+ </div>
+
+
+</body>
+</html>

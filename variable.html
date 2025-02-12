@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+*{
+    transition: 0.5s;
+}
+
+.hov
+{
+transform:scale(1);
+border-radius:15px;
+transition:0.90s ease-in-out;
+}
+
+.hov1
+{
+border-radius:15px;
+transition:0.90s ease-in-out;
+}
+
+.mystyle{
+
+color:grayscale;
+box-shadow:10px 10px 10px teal;
+transform:scale(1);
+}
+
+</style>
+
+<body>
+
+<h1 id="about">Hello</h1>
+<img src="images/29.png " width='50%'>
+
+<p>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ratione libero non adipisci necessitatibus deserunt, minima facere tenetur eaque pariatur voluptas esse, magni perspiciatis quod dolore praesentium itaque deleniti nostrum.
+Similique rerum enim nobis optio veritatis at vitae explicabo sapiente et, itaque sed suscipit, reprehenderit dignissimos nisi vel unde doloribus voluptates eligendi praesentium culpa cum placeat porro. Maxime, fugit iste.
+Quisquam voluptatem incidunt, aspernatur nam vel expedita harum ipsa vitae quod 
+</p>
+
+<p>
+
+nisi eaque laborum! Praesentium cumque, asperiores aperiam assumenda ipsam sint sit eius deserunt voluptatum similique commodi, rem totam soluta!
+Explicabo unde nesciunt, libero magnam quasi delectus architecto suscipit accusantium excepturi quos consequuntur tempore distinctio ad? In esse maiores sequi, quidem sint minus quam ducimus impedit saepe, expedita error officiis.
+Sint dolor aspernatur quis expedita pariatur quod atque assumenda dolores. Labore dolore iste sit, quibusdam non possimus totam asperiores officia facilis modi nam quo similique aut molestiae accusamus cupiditate hic? 
+</p>
+
+
+<p>
+nisi eaque laborum! Praesentium cumque, asperiores aperiam assumenda ipsam sint sit eius deserunt voluptatum similique commodi, rem totam soluta!
+Explicabo unde nesciunt, libero magnam quasi delectus architecto suscipitaccusantium excepturi quos consequuntur tempore distinctio ad? In esse maiores sequi, quidem sint minus quam ducimus impedit saepe, expedita error officiis.
+Sint dolor aspernatur quis expedita pariatur quod atque assumenda dolores. Labore dolore iste sit, quibusdam non possimus totam asperiores officia facilis modi nam quo similique aut molestiae accusamus cupiditate hic? 
+
+</p>
+
+<script>
+
+ var myhead = document.getElementById("about")
+ myhead.style="text-align:center;margin:auto;width:200px;border-radius:35px;"
+ myhead.style.background="bisque"
+ myhead.style.padding="20px"
+ myhead.innerHTML = "<h1><u><i>Hello</i></u></h1><img src='images/29.png'margin:auto; width='100%' />"
+
+
+ myhead.onclick =function()
+ {
+ myhead.style.background="darkkhaki"
+ myhead.style.cursor ="pointer"
+ myhead.className="mystyle"
+ myhead.className="hov"
+ }
+
+ myhead.onmouseout=function()
+ {
+    myhead.style.background="indigo"
+    myhead.classList.remove("mystyle")
+ }
+
+
+
+
+    var d = document.createElement("div")
+         document.body.appendChild(d)
+    
+         d.style="padding:30px;text-align:center;color:green"
+         d.style.width="100px"
+         d.style.height="100px"
+         d.style.border="10px"
+         d.style.background="maroon"
+         d.style.boxShadow= "10px 10px 10px gray"
+    
+     
+    
+        d.innerHTML = "<h1><u><i>Book Now</i></u></h1>"
+         
+        d.onclick =function()
+       {
+        d.style.background="limegreen"
+        d.style.cursor ="pointer"
+        d.style.scale="20px"
+       }
+
+      
+
+ /*searchig Dom element by querydelector method */d
+
+    const allptag = document.querySelectorAll("p")
+
+    const image = document.querySelectorAll("img")
+
+
+  image[0].onmouseover = function()
+  {
+     image[0].style.transform="scale(2.10)"
+  }
+
+
+ image[0].onmouseout = function()
+  {
+     this.style.transform="scale(1)"
+  }
+
+   allptag[0].style.cursor="pointer"
+   allptag[1].style.color="green"
+   allptag[2].style.color="rosybrown"
+
+ allptag[0].onmouseover =function()
+    {
+     allptag[0].style.opacity="1"
+     allptag[0].style.transform="scale(1.10)"
+     this.style="color:white;padding:10px;background:url(images/sc.jpg)"
+    }
+ 
+ allptag[0].onmouseout =function()
+   {
+     allptag[0].style.opacity="0.4"
+     allptag[0].style.transform="scale(1)"
+   }
+
+    allptag[1].onmouseover = function()
+   {
+     this.style="padding:30px;color:black;opacity:1;cursor:pointer;background:lemonchiffon"
+   }
+    
+   allptag[1].onmouseout = function()
+   {
+     this.style="color:orangered;opacity:0.5;cursor:pointer;background:"
+   }
+
+    allptag[2].onmouseover = function()
+   {
+     this.style="padding:30px;color:white;opacity:1;cursor:pointer;background:url(images/sc.jpg)"
+   }
+
+   allptag[2].onmouseout = function()
+   {
+     this.style="opacity:1;cursor:pointer"
+   }
+
+        
+   </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+ 
+ header{
+  width:100%;
+  margin:auto;
+  text-align:center;
+  height:300px;
+ 
+ }
+
+ #pic{
+
+  width:70%;
+  height:350px;
+  border-radius:10px;
+  box-shadow:5px 5px 5px gray;
+  filter: drop-shadow(2px 2px gray);
+
+ }
+
+</style>
+<body onLoad="show()">
+ <header>
+  <h1>Advertisment Banner</h1>
+<img id="pic" src="images/7.gif" />
+ </header>
+<script>
+var c= 0
+var t
+// recusrive funtion
+
+    var p = document.getElementById("pic")
+
+  function show()
+   {
+
+        if(c<5)
+          {
+           c++
+          }
+
+        else{
+          c=1
+        }
+
+      switch(c)
+      {
+        case 1:
+          p.src="images/1.gif"
+          break;
+          case 2:
+            p.src="images/2.gif"
+
+          break;
+          case 3:
+          p.src="images/3.gif"
+          break;
+          case 4:
+          p.src="images/4.gif"
+          break;
+          case 5:
+           p.src="images/5.gif"
+           break;
+
+
+      }
+        
+      
+      
+      
+    document.title = c
+    t=setTimeout("show()",5000)
+  }
+          
+       
+          
+
+
+   //timer object
+   // var t=setinterval("show()",1000)
+  </script>
+
+
+
+
+  
+</body>
+</html>

@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<style>
+
+#bar{
+  width:100%;
+  text-align:center;
+  padding-right:20px;
+}
+
+#dark,#light
+{
+  background:black;
+  cursor:pointer;
+  text-align: center;
+  color: gold;
+  border-radius: 20px;
+  box-shadow: 2px 5px 5px black;
+  text-align:center ;
+}
+
+</style>
+
+<body>
+
+  <div id="bar"><button id="dark">Dark😎</button><button id="light">light😎</button>
+
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet pariatur deserunt dolores, rem doloremque illum nihil repellendus aspernatur similique aut in error ut qui repellat delectus incidunt nemo exercitationem accusantium.
+    Quo, inventore doloribus perspiciatis est ducimus laborum quibusdam eos. Ut sunt facilis impedit porro animi repellendus fugit illum perferendis, at ad labore quia, vero eos ipsum hic minima provident autem.
+    Doloribus, temporibus rem enim dolore asperiores quod in quaerat porro eos quia at natus cumque totam ex? Dolor error neque, quis, sequi quae molestiae asperiores magnam dolores animi debitis repudiandae.
+    Quas, harum asperiores recusandae necessitatibus ut commodi iusto maiores blanditiis aspernatur magni repellat repellendus voluptates odio nesciunt impedit unde eveniet expedita culpa eum quis est quisquam eaque? Perferendis, fugiat enim!
+    <img src="images/1.gif" vspace="20" hspace="20" width="20%" height="40%" >
+
+    Inventore, laudantium illo, aperiam ut quod tempora, eum quibusdam assumenda corporis dignissimos nulla harum quasi ea dolorem optio omnis cupiditatedoloremque necessitatibus molestiae est. Aut recusandae tempore quod soluta et?
+  </p>
+
+
+  <script>
+
+   var d =document.getElementById("dark")
+   var l =document.getElementById("light")
+   var m =document.createElement("span")
+   var b =document.getElementById("bl")
+   document.body.appendChild(m)
+
+    function f1()
+    {
+      if(document.body.style.background="black")
+
+      {
+        
+        b.innerHTML ="dark"
+        document.body.style="background=black;color:;"
+        
+      }
+      else
+      {
+
+        b.innerHTML ="light"
+         document.body.style="background:black;color:white;"
+      }
+  }
+    
+  m.style="transition:0.5s;opacity:0;position:absolute;top:0px;left:0px"
+  m.innerHTML="tool"
+
+  d.onclick = function()
+  {
+    document.body.style="background:black;color:white;"
+
+  }
+   
+  l.onclick =function()
+  {
+    document.body.style="background:;color:;"
+  }
+
+  d.onmouseover =function(e)
+  {
+    m.style.opacity=1
+    m.style.top =e.pageY+4+"px"
+    m.style.left =e.pageX-20+"px"
+    m.innerHTML ="dark"
+    document.title ="x ="+e.pageX+" y = "+e.pageY
+    d.style.transform="rotate(360deg)"
+
+  }
+
+  d.onmouseout =function()
+  {
+    m.style.opacity=0
+  }
+  
+  
+
+  l.onmouseover = function(e)
+  {
+    m.style.opacity=1
+    m.style.top =e.pageY+5+"px"
+    m.style.left =e.pageX-65+"px"
+    m.innerHTML ="light"
+    document.title ="x ="+e.pageX+" y ="+e.pageY
+  }
+
+  l.mouseout =function(e)
+  {
+    m.style.opacity=0
+    
+  }
+
+  document.title ="ready"
+
+ 
+  </script>
+
+</body>  
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+ 
+
+@keyframes fadout
+{
+from{opacity:0;transform:scale(1.2);}
+to{opacity:0.99;}
+}
+
+@keyframes blink
+{from{opacity:0}
+to{opacity:1}
+}
+
+
+#myheading2
+{
+color:white;
+margin: auto;
+text-align: center;
+font-size:100px;
+text-shadow:5px 5px 5px teal;
+animation:fadout 2s ease-in infinite alternate;
+animation:blink 2s ease-in infinite alternate;
+}
+
+
+  
+
+#f1,#f2
+    {
+      background:black;
+      cursor:pointer;
+      text-align: center;
+      color: gold;
+      border-radius: 20px;
+      box-shadow: 2px 5px 5px black;
+ }
+
+ #bar{
+      width:100%;
+      text-align:center;
+      padding:20px;
+    }
+
+
+
+
+</style>
+
+<body>
+  
+<!--The widnow history object
+the history object contains the  urls visited by the  user (in the  browser window
+the history)The history object is a property of the window oject-->
+
+<!--
+other object(classes)in the javascript window,locatins,history,navigator,date,array,math,string
+how to create window
+-->
+<div id="bar">
+  <button id="f1" onClick="f1()">New Game</button>
+  <button id="f2" onClick="f2()">Load Game</button>
+</div>
+
+<h1 id="myheading2">Start The Game</h1>
+
+
+
+
+  <script>
+  
+
+  //data type
+  /*
+  var n =10
+  var uname ="ravi"
+  var married = true
+
+  */
+
+
+  var uname = new String("Hello")
+  //alert(uname.toupperCase)
+  //alert.(uname.length)
+  //alert(uname.charAt(3))
+
+  /*
+  the window navigator object
+  the navigator object contains information about the browser
+  window.navigator or just navigator:
+  */
+
+  let mybrowsername =navigator.appName;
+  //alert(mybrowsername)
+  let n =navigator.appCodeName;
+  alert(n)
+  //redirection
+  //window.location="sup.html"
+  document.write("<h1>Create Windows</h1>")
+  //document.write("<h1>Star Your Game</h1>")
+
+  function f1 ()
+  {
+    open("keyanim.html","win1")
+
+  }
+
+  function f2()
+  {
+    var w =open("","win2","width=200 height=200 top=100 left=100")
+
+    w.document.write("<img style='width:60%' src='images/supe.gif'>")
+
+    w.document.write("<h1>Oops! He Fly Somehow.</h1>")
+
+    w.document.body.style.background="Teal"
+
+    
+
+
+  }
+   
+
+
+  </script>
+  
+
+</body>
+</html>
